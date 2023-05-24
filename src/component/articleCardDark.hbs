@@ -1,0 +1,19 @@
+{{#with data}}
+  <div class='articles_item' id='articles_item_{{id}}'>
+
+    <div class='articles_content'>
+      <img
+        src='{{photo}}'
+        alt='article image'
+        class='articles_image'
+      />
+      <h4 class='articles_name'>{{name}}</h4>
+      <p class='articles_description'>{{description}}</p>
+    </div>
+
+    <button
+      class='articles_read_button button_animation'
+    >Read All</button>
+
+  </div>
+{{/with}}
