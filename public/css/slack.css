@@ -242,6 +242,113 @@ body {
   .features_grid_4 > .feat_card:first-of-type {
     grid-row: 1 / 3;
   }
+
+  .deliveroo_section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 16px 48px 16px;
+  }
+
+  .deliveroo_container {
+    max-width: 1020px;
+    display: grid;
+    gap: 38px;
+    align-items: center;
+    grid-template-columns: auto 370px;
+  }
+
+  .deliveroo_img {
+    width: 100%;
+  }
+
+  .deliveroo_content {
+    display: grid;
+    gap: 24px;
+  }
+
+  .deliveroo_content p {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: #000000;
+  }
+
+  .deliveroo_content span {
+    display: grid;
+    gap: 24px;
+  }
+
+  .about_us_section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 16px 80px 16px;
+  }
+
+  .about_us_content {
+    max-width: 1020px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about_us_title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .about_us_card_container {
+    display: grid;
+    gap: 76px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about_us_card {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .about_us_img {
+    width: 100%;
+  }
+  .about_us_card_content {
+    padding: 7px 12px 16px;
+    min-height: 210px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about_us_card_content .description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about_us_card_content .description p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+  }
+
+  .about_us_card_content .description span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+  }
+  .about_us_card_content .learn_more {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1264a3;
+  }
 }
 
 @layer adaptive {
@@ -288,11 +395,33 @@ body {
     .features_section {
       background: none;
     }
+    .deliveroo_container {
+      max-width: var(--page-width-small);
+      grid-template-columns: 1fr;
+    }
+    .deliveroo_img {
+      width: 60%;
+    }
+    .about_us_card_container {
+      max-width: var(--page-width-small);
+      gap: 36px;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media all and (width < 600px) {
     .features_grid_4 {
       grid-template-columns: 2fr 2fr;
+    }
+    .deliveroo_img {
+      width: 100%;
+    }
+  }
+
+  @media all and (width < 500px) {
+    .about_us_card_container {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -304,6 +433,9 @@ body {
     .hero_buttons {
       grid-template-columns: 1fr;
       gap: var(--spacing-2);
+    }
+    .about_us_card_container {
+      grid-template-columns: 1fr;
     }
   }
 }
